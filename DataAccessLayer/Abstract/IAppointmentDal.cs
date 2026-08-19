@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IAppointmentDalcs : IGenericDal<Appointment>
+    public interface IAppointmentDal: IGenericDal<Appointment>
     {
     }
 }
