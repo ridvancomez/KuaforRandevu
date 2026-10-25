@@ -42,6 +42,10 @@ namespace DataAccessLayer.Migrations
                     b.Property<TimeSpan>("EndTime")
                         .HasColumnType("time");
 
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ServiceID")
                         .HasColumnType("int");
 

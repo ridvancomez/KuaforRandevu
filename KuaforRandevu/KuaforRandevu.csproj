@@ -23,6 +23,7 @@
   <ItemGroup>
     <Folder Include="Areas\Cms\Data\" />
     <Folder Include="Areas\Cms\Models\" />
+    <Folder Include="Areas\Cms\Views\Shared\Partial\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Cms/Views/Shared/_Layout.cshtml";
+}
+
+<main class="app-main">
+    <div class="app-content-header">
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title mb-0 fs-3">Data Tables</h1>
+                    <a href="@Url.Action("Create", "Customer", new { area = "Cms" })" class="btn btn-primary float-end">Ekle</a>
+                </div>
+                <div class="card-body">
+                    <div id="users-table">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title1</th>
+                                    <th>Title2</th>
+                                    <th>Title3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Content1</td>
+                                    <td>Content2</td>
+                                    <td>Content3</td>
+                                </tr>
+                                <tr>
+                                    <td>Content1</td>
+                                    <td>Content2</td>
+                                    <td>Content3</td>
+                                </tr>
+                                <tr>
+                                    <td>Content1</td>
+                                    <td>Content2</td>
+                                    <td>Content3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

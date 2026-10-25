@@ -30,5 +30,7 @@ namespace EntityLayer.Concrete
         public TimeSpan EndTime { get; set; }
 
         public string Status { get; set; } = "Beklemede"; // Beklemede / Onaylandı / İptal
+
+        public string Note { get; set; }
     }
 }

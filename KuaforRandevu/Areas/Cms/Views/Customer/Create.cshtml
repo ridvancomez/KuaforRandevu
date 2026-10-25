@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Cms/Views/Shared/_Layout.cshtml";
+}
+<div class="app-content">
+    <div class="container-fluid">
+        <div class="row g-4 mt-1">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <div class="card-title">Müşteri Ekleme Formu</div>
+                    </div>
+                    <form>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="CustomerName" class="col-sm-2 col-form-label">İsim</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="CustomerName" name="CustomerName" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="phoneNumber" class="col-sm-2 col-form-label">Telefon</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" inputmode="numeric" class="form-control" id="phoneNumber" maxlength="15" oninput="formatPhoneNumber(this)" placeholder="(532) 555 55 55" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="row mb-3">
+                                        <label for="CustomerEmail" class="col-sm-1 col-form-label">E Posta</label>
+                                        <div class="col-sm-11">
+                                            <input type="email" class="form-control" id="CustomerEmail" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //Js Format phone number
+    function formatPhoneNumber(input) {
+        const cleaned = input.value.replace(/\D/g, '').slice(0, 10);
+        let formatted = cleaned;
+
+        if (cleaned.length > 0) {
+            formatted = '(' + cleaned.substring(0, 3);
+        }
+        if (cleaned.length >= 4) {
+            formatted += ') ' + cleaned.substring(3, 6);
+        }
+        if (cleaned.length >= 7) {
+            formatted += ' ' + cleaned.substring(6, 8);
+        }
+        if (cleaned.length >= 9) {
+            formatted += ' ' + cleaned.substring(8, 10);
+        }
+
+        input.value = formatted;
+    }
+</script>
